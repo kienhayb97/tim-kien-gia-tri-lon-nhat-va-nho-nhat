@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timMin(arr) {
+        let min = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i]
+            }
+        }
+        return min
+    }
+
+    function timMax(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i]
+            }
+        }
+        return max
+    }
+
+    let num = [];
+    for (let i = 0; i < 100; i++) {
+        num[i] = Math.floor(Math.random() * 101)
+    }
+    let minValue = timMin(num);
+    let maxValue = timMax(num);
+    document.writeln(maxValue);
+    document.writeln(minValue);
+
+</script>
+</body>
+</html>
